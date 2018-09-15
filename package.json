@@ -1,6 +1,6 @@
 {
 	"scripts": {
-		"dev": "NODE_ENV=development ./node_modules/.bin/webpack-dev-server --port 4210",
+		"dev": "NODE_ENV=development ./node_modules/.bin/webpack-dev-server --port 4200",
 		"build": "NODE_ENV=development ./node_modules/.bin/webpack",
 		"build:production": "NODE_ENV=production ./node_modules/.bin/webpack --optimise-minimise",
 		"postinstall": "yarn run link-app-root",
