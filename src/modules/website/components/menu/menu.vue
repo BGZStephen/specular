@@ -7,9 +7,7 @@
         <img class="logo-light" src="/assets/img/logo_light.png">
       </div>
       <ul id="website-menu-items-list" class="menu-items">
-        <li class="menu-item" v-for="menuItem in menuItems">
-          {{menuItem.label}}
-        </li>
+        <router-link tag="li" class="menu-item" class-active="active" v-for="menuItem in menuItems" :to="{path: menuItem.link}">{{menuItem.label}}</router-link>
       </ul>
     </div>
   </div>
@@ -31,7 +29,19 @@ export default {
         },
         { 
           label: 'About',
-          link: '/'
+          link: '/about'
+        },
+        { 
+          label: 'Services',
+          link: '/services'
+        },
+        { 
+          label: 'FAQ',
+          link: '/faq'
+        },
+        { 
+          label: 'Contact',
+          link: '/contact'
         },
       ],
       mobileMenuVisible: false,
@@ -161,7 +171,7 @@ export default {
           transition: 0.3s ease all;
           padding: 10px 40px;
 
-          &.active,
+          &.router-link-active,
           &:hover {
             color: #ffffff;
           }
