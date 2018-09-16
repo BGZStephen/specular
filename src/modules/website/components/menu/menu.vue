@@ -148,6 +148,8 @@ export default {
         height: 0;
         overflow: hidden;
         list-style: none;
+        max-height: calc(100vh - #{$website-menu-height});
+        overflow: scroll;
         transition: 0.3s ease all;
 
         .menu-item {
@@ -180,6 +182,7 @@ export default {
           width: auto;
           display: flex;
           transition: none;
+          overflow: hidden;
         }
       }
 
