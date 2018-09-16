@@ -2,17 +2,74 @@
   <div id="website-menu">
     <div class="container-1200">
       <div class="logo-container">
-        <i class="fa fa-bars"></i>
+        <i class="fa fa-bars" @click="toggleMobleMenuVisible()"></i>
         <img class="logo" src="/assets/img/logo.png">
         <img class="logo-light" src="/assets/img/logo_light.png">
       </div>
+      <ul id="website-menu-items-list" class="menu-items">
+        <li class="menu-item" v-for="menuItem in menuItems">
+          {{menuItem.label}}
+        </li>
+      </ul>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-	name: 'WebsiteMenu',
+  name: 'WebsiteMenu',
+  mounted: function () {
+    this.onWindowResize()
+    window.addEventListener('resize', this.onWindowResize);
+  },
+  data() {
+    return {
+      menuItems: [
+        { 
+          label: 'Home',
+          link: '/'
+        },
+        { 
+          label: 'About',
+          link: '/'
+        },
+      ],
+      mobileMenuVisible: false,
+    }
+  },
+  methods: {
+    onWindowResize() {
+      if (screen.width > 980) {
+        this.mobileMenuVisible = false;
+        this.setDesktopMenuStyles()
+      }
+
+      else if (screen.width <= 980 && !this.mobileMenuVisible) {
+        this.clearCustomMenuStyles();
+      }
+    },
+    toggleMobleMenuVisible() {
+      this.mobileMenuVisible = !this.mobileMenuVisible;
+
+      if (this.mobileMenuVisible) {
+        this.setCustomMenuStyles();
+      } else {
+        this.clearCustomMenuStyles();
+      }
+    },
+    setCustomMenuStyles() {
+      const menuItems = document.getElementById('website-menu-items-list');
+      const menuItemsLength = menuItems.children.length;
+      const menuSize = `${(menuItemsLength * 38) + 40}px`;
+      menuItems.style.cssText = `height: ${menuSize}; padding: 20px 0;`;
+    },
+    setDesktopMenuStyles() {
+      document.getElementById('website-menu-items-list').style.cssText = "height: auto";
+    },
+    clearCustomMenuStyles() {
+      document.getElementById('website-menu-items-list').style.cssText = "";
+    }
+  }
 };
 </script>
 
@@ -79,10 +136,58 @@ export default {
   
         @media(min-width: $screen-lg) {
           max-width: 1100px;
+          margin: 0;
+        }
+      }
+
+      .menu-items {
+        position: absolute;
+        top: $website-menu-height;
+        background: $brand-light-black;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        list-style: none;
+        transition: 0.3s ease all;
+
+        .menu-item {
+          cursor: pointer;
+          color: $font-grey;
+          font-size: 14px;
+          font-weight: 600;
+          text-transform: uppercase;
+          transition: 0.3s ease all;
+          padding: 10px 40px;
+
+          &.active,
+          &:hover {
+            color: #ffffff;
+          }
+
+          @media(min-width: $screen-lg) {
+            color: #ffffff;
+            padding: 10px 20px;
+            &:hover {
+              color: $font-light-grey;
+            }
+          }
+        }
+
+        @media(min-width: $screen-lg) {
+          background: none;
+          position: relative;
+          top: 0;
+          width: auto;
+          display: flex;
+          transition: none;
         }
       }
 
       @media(min-width: $screen-lg) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
         padding: 0 70px;
       }
     }
