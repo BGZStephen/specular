@@ -3,7 +3,8 @@
     <div class="container-1200">
       <div class="logo-container">
         <i class="fa fa-bars"></i>
-        <img src="/assets/img/logo.png">
+        <img class="logo" src="/assets/img/logo.png">
+        <img class="logo-light" src="/assets/img/logo_light.png">
       </div>
     </div>
   </div>
@@ -20,6 +21,11 @@ export default {
 
   #website-menu {
     background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: $website-menu-z-index;
 
     .container-1200 {
       max-width: 1200px;
@@ -42,8 +48,25 @@ export default {
           }
         }
   
-        img {
+        .logo,
+        .logo-light {
           margin-right: 10px;
+          
+          height: 50px;
+          width: 164px;
+        }
+
+        .logo {
+          @media(min-width: $screen-lg) {
+            display: none;
+          }  
+        }
+
+        .logo-light {
+          display: none;
+          @media(min-width: $screen-lg) { 
+            display: block;
+          }  
         }
   
         @media(min-width: $screen-sm) {
@@ -62,6 +85,10 @@ export default {
       @media(min-width: $screen-lg) {
         padding: 0 70px;
       }
+    }
+
+    @media(min-width: $screen-lg) {
+      background: none;
     }
   }
 </style>
