@@ -1,6 +1,6 @@
 <template lang="html">
   <div id="website-menu">
-    <div class="container-1200">
+    <div class="container-1100">
       <div class="logo-container">
         <i class="fa fa-bars" @click="toggleMobleMenuVisible()"></i>
         <img class="logo" src="/assets/img/logo.png">
@@ -94,10 +94,7 @@ export default {
     right: 0;
     z-index: $website-menu-z-index;
 
-    .container-1200 {
-      max-width: 1200px;
-      margin: 0 auto;
-
+    .container-1100 {
       .logo-container {
         align-items: center;
         display: flex;
@@ -118,7 +115,6 @@ export default {
         .logo,
         .logo-light {
           margin-right: 10px;
-          
           height: 50px;
           width: 164px;
         }
@@ -142,11 +138,13 @@ export default {
   
         @media(min-width: $screen-md) {
           max-width: 740px;
+          padding: 0 25px;
         }
   
         @media(min-width: $screen-lg) {
           max-width: 1100px;
           margin: 0;
+          padding: 0;
         }
       }
 
@@ -201,7 +199,6 @@ export default {
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        padding: 0 70px;
       }
     }
 

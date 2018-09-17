@@ -1,2 +1,16 @@
 $website-menu-height: 90px;
 $website-menu-z-index: 100;
+
+$media-size-selectors: (
+  xs,
+	sm,
+	md,
+  lg,
+);
+
+$media-size-widths: (
+  320px,
+  480px,
+  768px,
+  980px,
+);

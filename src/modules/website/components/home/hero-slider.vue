@@ -2,13 +2,15 @@
   <div id="hero-slider">
     <div class="slides-row">
       <div class="slide" :class="slide.class" v-for="slide in slides">
-        <h2 class="slide-heading">{{slide.heading}}</h2>
-        <p class="slide-body">{{slide.body}}</p>
-        <div class="slide-buttons-container">
-          <a class="button" :class="button.class" v-for="button in slide.buttons">
-            <p>{{button.label}}</p>
-            <i class="fa fa-arrow-right"></i>
-          </a>
+        <div class="container-1100">
+          <h2 class="slide-heading">{{slide.heading}}</h2>
+          <p class="slide-body">{{slide.body}}</p>
+          <div class="slide-buttons-container">
+            <a class="button" :class="button.class" v-for="button in slide.buttons">
+              <p>{{button.label}}</p>
+              <i class="fa fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -180,7 +182,6 @@ export default {
         position: relative;
         transition: 0.3s ease all;
         text-align: center;
-        max-width: 1200px;
         margin: 0 auto;
       }
 
@@ -238,6 +239,7 @@ export default {
         font-weight: 600;
         padding: 10px 20px;
         text-transform: uppercase;
+        transition: 0.2s ease background;
         color: white;
 
         p {

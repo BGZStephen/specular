@@ -1,0 +1,39 @@
+.row {
+	display: flex;
+	margin-bottom: 10px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+.col {
+  width: 100%;
+}
+
+@for $i from 1 through 12 {
+	.col-#{$i} {
+		width: calc((100% / 12) * #{$i});
+	}
+}
+
+@each $selector in $media-size-selectors {
+	$i: index($media-size-selectors, $selector);
+
+	@for $j from 1 through 12 {
+		.col-#{nth($media-size-selectors, $i)}-#{$j} {
+      margin-bottom: 15px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+			@media (min-width: #{nth($media-size-widths, $i)}) {
+        margin-bottom: 0;
+				width: calc((100% / 12) * #{$j});
+			}
+		}
+	}
+}
