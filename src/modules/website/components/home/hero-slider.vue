@@ -1,7 +1,12 @@
 <template lang="html">
   <div id="hero-slider">
     <div class="slides-row">
-      <div class="slide" v-bind:class="slide.class" v-for="slide in slides">
+      <div class="slide" :class="slide.class" v-for="slide in slides">
+        <h2 class="slide-heading">{{slide.heading}}</h2>
+        <p class="slide-body">{{slide.body}}</p>
+        <div class="slide-buttons-container">
+          <a class="button" :class="button.class" v-for="button in slide.buttons">{{button.label}}</a>
+        </div>
       </div>
     </div>
   </div>
@@ -21,11 +26,11 @@ export default {
           body: 'Pig rump bresaola, tongue pork chop cupim drumstick turducken tri-tip porchetta kevin pancetta. Meatball frankfurter corned',
           buttons: [
             {
-              label: 'Button 1',
+              label: 'Take tour',
               class: 'hero-button-primary'
             },
             {
-              label: 'Button 2',
+              label: 'Purchase now',
               class: 'hero-button-secondary'
             }
           ]
@@ -36,11 +41,11 @@ export default {
           body: 'Pig rump bresaola, tongue pork chop cupim drumstick turducken tri-tip porchetta kevin pancetta. Meatball frankfurter corned',
           buttons: [
             {
-              label: 'Button 1',
+              label: 'Take tour',
               class: 'hero-button-primary'
             },
             {
-              label: 'Button 2',
+              label: 'Purchase now',
               class: 'hero-button-secondary'
             }
           ]
@@ -51,11 +56,11 @@ export default {
           body: 'Pig rump bresaola, tongue pork chop cupim drumstick turducken tri-tip porchetta kevin pancetta. Meatball frankfurter corned',
           buttons: [
             {
-              label: 'Button 1',
+              label: 'Take tour',
               class: 'hero-button-primary'
             },
             {
-              label: 'Button 2',
+              label: 'Purchase now',
               class: 'hero-button-secondary'
             }
           ]
@@ -139,12 +144,99 @@ export default {
       transition: 0.8s ease-in-out left;
 
       .slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         min-width: 33.333%;
         max-width: 33.333%;
         height: 100%;
+        padding: $website-menu-height 15px 0 15px;
+
+        .slide-heading,
+        .slide-body,
+        .slide-buttons-container {
+          opacity: 0;
+          position: relative;
+          transition: 0.3s ease all;
+          text-align: center;
+        }
+
+        .slide-heading {
+          letter-spacing: .1em;
+          color: white;
+          bottom: 20px;
+          font-size: 20px;
+          font-weight: 600;
+          margin-bottom: 15px;
+          text-transform: uppercase;
+        }
+
+        .slide-body {
+          color: white;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 1.6;
+          letter-spacing: .2em;
+          top: 20px;
+          margin-bottom: 15px;
+        }
+
+        .slide-buttons-container {
+          letter-spacing: .1em;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          top: 20px;
+        }
+
+        .hero-button-primary,
+        .hero-button-secondary {
+          border: none;
+          border-radius: 2px;
+          font-size: 10px;
+          font-weight: 600;
+          padding: 10px 20px;
+          text-transform: uppercase;
+          color: white;
+        }
+
+        .hero-button-primary {
+          border: 2px solid white;
+          margin-right: 15px;
+        }
+
+        .hero-button-secondary {
+          border: 2px solid $brand-blue;
+          background: $brand-blue;
+          margin-right: 15px;
+        }
 
         &.active {
+          .slide-heading,
+          .slide-body,
+          .slide-buttons-container {
+            opacity: 1;
+          }
 
+          .slide-heading {
+            transition: 0.5s ease bottom, 0.5s ease opacity;
+            bottom: 0;
+          }
+
+          .slide-body {
+            transition: 0.5s ease top 0.3s, 0.5s ease opacity 0.3s;
+            top: 0;
+          }
+
+          .slide-buttons-container {
+            transition: 0.5s ease top 0.6s, 0.5s ease opacity 0.6s;
+            top: 0;
+          }
+        }
+
+        @media(min-width: $screen-lg) {
+          padding-top: 0;
         }
       }
 
