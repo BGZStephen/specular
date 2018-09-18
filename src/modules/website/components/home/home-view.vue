@@ -1,16 +1,19 @@
 <template lang="html">
   <div id="home-view">
     <website-hero-slider></website-hero-slider>
+    <home-features></home-features>
   </div>
 </template>
 
 <script>
 import WebsiteHeroSlider from './hero-slider.vue';
+import HomeFeatures from './features.vue';
 
 export default {
 	name: 'WebsiteHomeView',
   components: {
-    WebsiteHeroSlider
+    WebsiteHeroSlider,
+    HomeFeatures
   }
 };
 </script>
