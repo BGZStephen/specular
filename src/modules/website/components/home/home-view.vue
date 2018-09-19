@@ -1,22 +1,25 @@
 <template lang="html">
   <div id="home-view">
-    <website-hero-slider></website-hero-slider>
+    <hero-slider></hero-slider>
     <home-features></home-features>
     <home-contact-seperator></home-contact-seperator>
+    <home-why-choose-us></home-why-choose-us>
   </div>
 </template>
 
 <script>
-import WebsiteHeroSlider from './hero-slider.vue';
+import HeroSlider from './hero-slider.vue';
 import HomeFeatures from './features.vue';
 import HomeContactSeperator from './contact-seperator.vue';
+import HomeWhyChooseUs from './why-choose-us.vue';
 
 export default {
 	name: 'WebsiteHomeView',
   components: {
-    WebsiteHeroSlider,
+    HeroSlider,
     HomeFeatures,
-    HomeContactSeperator
+    HomeContactSeperator,
+    HomeWhyChooseUs
   }
 };
 </script>

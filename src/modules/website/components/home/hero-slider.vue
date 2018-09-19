@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: 'WebsiteHeroSlider',
+  name: 'HeroSlider',
   data() {
     return {
       slideAnimation: null,
