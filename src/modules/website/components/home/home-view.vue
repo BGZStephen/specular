@@ -15,6 +15,7 @@ import Features from './features.vue';
 import ContactSeperator from './contact-seperator.vue';
 import WhyChooseUs from './why-choose-us.vue';
 import OurProjects from './our-projects.vue';
+import DevicePreview from './device-preview.vue';
 
 export default {
 	name: 'WebsiteHomeView',
@@ -24,6 +25,7 @@ export default {
     ContactSeperator,
     WhyChooseUs,
     OurProjects,
+    DevicePreview
   }
 };
 </script>

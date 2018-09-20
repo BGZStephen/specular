@@ -27,6 +27,7 @@ export default {
 
   #why-choose-us {
     padding: 40px 25px;
+    text-align: center;
 
     .text-container {
       h4 {
@@ -59,6 +60,7 @@ export default {
 
       @media(min-width: $screen-md) {
         padding: 35px 0 0 45px;
+        text-align: left;
       }
     }
 
