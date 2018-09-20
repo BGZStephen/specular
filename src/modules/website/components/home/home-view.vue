@@ -2,6 +2,7 @@
   <div id="home-view">
     <hero-slider></hero-slider>
     <home-features></home-features>
+    <our-projects></our-projects>
     <home-contact-seperator></home-contact-seperator>
     <home-why-choose-us></home-why-choose-us>
   </div>
@@ -12,6 +13,7 @@ import HeroSlider from './hero-slider.vue';
 import HomeFeatures from './features.vue';
 import HomeContactSeperator from './contact-seperator.vue';
 import HomeWhyChooseUs from './why-choose-us.vue';
+import OurProjects from './our-projects.vue';
 
 export default {
 	name: 'WebsiteHomeView',
@@ -19,7 +21,8 @@ export default {
     HeroSlider,
     HomeFeatures,
     HomeContactSeperator,
-    HomeWhyChooseUs
+    HomeWhyChooseUs,
+    OurProjects
   }
 };
 </script>

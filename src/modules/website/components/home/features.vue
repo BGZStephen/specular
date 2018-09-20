@@ -43,7 +43,7 @@ export default {
   @import '~app-root/styles/variables/index';
 
   #home-features {
-    padding: 100px 45px;
+    padding: 80px 45px;
 
     .features-container {
       display: flex;
