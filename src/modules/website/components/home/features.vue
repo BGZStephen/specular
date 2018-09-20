@@ -1,5 +1,5 @@
 <template>
-  <div id="home-features">
+  <div id="features">
     <div class="container-1100">
       <div class="row features-container">
         <div class="col col-sm-6 col-lg-3 feature">
@@ -36,13 +36,13 @@
 </template>
 <script>
 export default {
-  name: 'HomeFeatures'
+  name: 'Features'
 }
 </script>
 <style lang="scss" scoped>
   @import '~app-root/styles/variables/index';
 
-  #home-features {
+  #features {
     padding: 80px 45px;
 
     .features-container {
