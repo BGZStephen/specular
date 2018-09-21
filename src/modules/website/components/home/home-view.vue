@@ -6,6 +6,7 @@
     <contact-seperator></contact-seperator>
     <why-choose-us></why-choose-us>
     <device-preview></device-preview>
+    <clients-slider></clients-slider>
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import ContactSeperator from './contact-seperator.vue';
 import WhyChooseUs from './why-choose-us.vue';
 import OurProjects from './our-projects.vue';
 import DevicePreview from './device-preview.vue';
+import ClientsSlider from './clients-slider.vue';
 
 export default {
 	name: 'WebsiteHomeView',
@@ -25,7 +27,8 @@ export default {
     ContactSeperator,
     WhyChooseUs,
     OurProjects,
-    DevicePreview
+    DevicePreview,
+    ClientsSlider,
   }
 };
 </script>

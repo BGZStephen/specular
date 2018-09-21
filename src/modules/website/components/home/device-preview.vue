@@ -36,10 +36,6 @@ export default {
   #device-preview {
     padding: 60px  25px;;
 
-    .image-container {
-
-    }
-
     .text-container {
       text-align: center;
 
