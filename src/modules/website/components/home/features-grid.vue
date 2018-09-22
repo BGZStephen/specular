@@ -139,6 +139,12 @@ export default {
           font-size: 13px;
         }
       }
+
+      @media(min-width: $screen-md) {
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 </style>

@@ -7,6 +7,7 @@
     <why-choose-us></why-choose-us>
     <device-preview></device-preview>
     <features-grid></features-grid>
+    <testimonials></testimonials>
     <clients-slider></clients-slider>
   </div>
 </template>
@@ -20,6 +21,7 @@ import WhyChooseUs from './why-choose-us.vue';
 import OurProjects from './our-projects.vue';
 import DevicePreview from './device-preview.vue';
 import ClientsSlider from './clients-slider.vue';
+import Testimonials from './testimonials.vue';
 
 export default {
 	name: 'WebsiteHomeView',
@@ -32,6 +34,7 @@ export default {
     OurProjects,
     DevicePreview,
     ClientsSlider,
+    Testimonials
   }
 };
 </script>
