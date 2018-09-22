@@ -37,10 +37,15 @@ export default {
       font-size: 22px;
       font-weight: 600;
       text-transform: uppercase;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
+
+      @media(min-width: $screen-md) {
+        margin-bottom: -10px;
+      }
     }
 
     .clients-slider {
+      margin-bottom: -35px;
       .client {
         padding: 5px;
         img {
