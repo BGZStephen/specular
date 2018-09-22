@@ -1,5 +1,5 @@
 <template>
-  <div id="features">
+  <div id="features-slider">
     <div class="container-1100">
       <div class="row features-container">
         <div class="col col-sm-6 col-lg-3 feature">
@@ -42,7 +42,7 @@ export default {
 <style lang="scss" scoped>
   @import '~app-root/styles/variables/index';
 
-  #features {
+  #features-slider {
     padding: 80px 45px;
 
     .features-container {
@@ -55,14 +55,14 @@ export default {
 
       h5 {
         font-weight: 600;
-        font-size: 14px;
+        font-size: 15px;
         margin-bottom: 5px;
       }
 
       p {
         color: $font-grey;
         line-height: 1.6;
-        font-size: 12px;
+        font-size: 13px;
       }
 
       .icon-container {

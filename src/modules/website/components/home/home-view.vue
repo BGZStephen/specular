@@ -1,18 +1,20 @@
 <template lang="html">
   <div id="home-view">
     <hero-slider></hero-slider>
-    <features></features>
+    <features-slider></features-slider>
     <our-projects></our-projects>
     <contact-seperator></contact-seperator>
     <why-choose-us></why-choose-us>
     <device-preview></device-preview>
+    <features-grid></features-grid>
     <clients-slider></clients-slider>
   </div>
 </template>
 
 <script>
 import HeroSlider from './hero-slider.vue';
-import Features from './features.vue';
+import FeaturesSlider from './features-slider.vue';
+import FeaturesGrid from './features-grid.vue';
 import ContactSeperator from './contact-seperator.vue';
 import WhyChooseUs from './why-choose-us.vue';
 import OurProjects from './our-projects.vue';
@@ -23,7 +25,8 @@ export default {
 	name: 'WebsiteHomeView',
   components: {
     HeroSlider,
-    Features,
+    FeaturesSlider,
+    FeaturesGrid,
     ContactSeperator,
     WhyChooseUs,
     OurProjects,
