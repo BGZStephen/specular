@@ -8,6 +8,7 @@
     <usage-stats></usage-stats>
     <device-preview></device-preview>
     <features-grid></features-grid>
+    <latest-news></latest-news>
     <testimonials></testimonials>
     <clients-slider></clients-slider>
   </div>
@@ -24,6 +25,7 @@ import DevicePreview from './device-preview.vue';
 import ClientsSlider from './clients-slider.vue';
 import Testimonials from './testimonials.vue';
 import UsageStats from './usage-stats.vue';
+import LatestNews from './latest-news.vue';
 
 export default {
 	name: 'WebsiteHomeView',
@@ -37,7 +39,8 @@ export default {
     DevicePreview,
     ClientsSlider,
     Testimonials,
-    UsageStats
+    UsageStats,
+    LatestNews
   }
 };
 </script>
