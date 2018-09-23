@@ -5,6 +5,7 @@
     <our-projects></our-projects>
     <contact-seperator></contact-seperator>
     <why-choose-us></why-choose-us>
+    <usage-stats></usage-stats>
     <device-preview></device-preview>
     <features-grid></features-grid>
     <testimonials></testimonials>
@@ -22,6 +23,7 @@ import OurProjects from './our-projects.vue';
 import DevicePreview from './device-preview.vue';
 import ClientsSlider from './clients-slider.vue';
 import Testimonials from './testimonials.vue';
+import UsageStats from './usage-stats.vue';
 
 export default {
 	name: 'WebsiteHomeView',
@@ -34,7 +36,8 @@ export default {
     OurProjects,
     DevicePreview,
     ClientsSlider,
-    Testimonials
+    Testimonials,
+    UsageStats
   }
 };
 </script>
