@@ -1,5 +1,5 @@
-import ViewWrapper from '../modules/website/view-wrapper.vue';
+import HomeView from '../modules/website/components/home/view.vue';
 
 export default [
-	{ path: '/', component: ViewWrapper },
+  { path: '/', component: HomeView },
 ];
