@@ -7,7 +7,7 @@
         <img class="logo-light" src="/assets/img/logo_light.png">
       </div>
       <ul id="website-menu-items-list" class="menu-items">
-        <router-link tag="li" class="menu-item" class-active="active" v-for="menuItem in menuItems" :to="{path: menuItem.link}">{{menuItem.label}}</router-link>
+        <router-link tag="li" class="menu-item" class-active="active" exact v-for="menuItem in menuItems" :to="{path: menuItem.link}">{{menuItem.label}}</router-link>
       </ul>
     </div>
   </div>
@@ -194,11 +194,35 @@ export default {
         }
       }
 
+
       @media(min-width: $screen-lg) {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
+      }
+    }
+
+    &.menu-dark {
+      .container-1100 {
+        .logo {
+          display: block;
+        }
+
+        .logo-light {
+          display: none;
+        }
+      }
+
+      .menu-items {
+        .menu-item {
+          color: black;
+
+          &:hover,
+          &.router-link-active {
+            color: $brand-blue;
+          }
+        }
       }
     }
 
