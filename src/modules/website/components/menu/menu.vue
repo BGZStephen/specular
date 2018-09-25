@@ -216,11 +216,15 @@ export default {
 
       .menu-items {
         .menu-item {
-          color: black;
+          color: $font-light-grey;
 
           &:hover,
           &.router-link-active {
             color: $brand-blue;
+          }
+
+          @media(min-width: $screen-md) {
+            color: black;
           }
         }
       }
