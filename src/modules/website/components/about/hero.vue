@@ -30,7 +30,11 @@ export default {
     h1 {
       letter-spacing: .1em;
       font-weight: 600;
-      font-size: 48px;
+      font-size: 44px;
+
+      @media(min-width: $screen-md) {
+        font-size: 48px;
+      }
     }
 
     hr {
@@ -40,8 +44,10 @@ export default {
     }
 
     p {
-      font-weight: 300;
       font-size: 26px;
+      @media(min-width: $screen-md) {
+        font-weight: 300;
+      }
     }
 
     @media (min-width: $screen-lg) {

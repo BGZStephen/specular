@@ -1,17 +1,20 @@
 <template lang="html">
   <div id="about-view">
     <hero></hero>
+    <who-we-are></who-we-are>
   </div>
 </template>
 
 <script>
 
 import Hero from './hero.vue'
+import WhoWeAre from './who-we-are.vue';
 
 export default {
   name: 'WebsiteAboutView',
   components: {
     Hero,
+    WhoWeAre,
   },
   mounted() {
     document.getElementById('website-menu').classList.add('menu-dark');
