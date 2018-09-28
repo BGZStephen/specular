@@ -18,7 +18,6 @@
 import HeroSlider from './hero-slider.vue';
 import FeaturesSlider from './features-slider.vue';
 import FeaturesGrid from './features-grid.vue';
-import ContactSeperator from './contact-seperator.vue';
 import WhyChooseUs from './why-choose-us.vue';
 import OurProjects from './our-projects.vue';
 import DevicePreview from './device-preview.vue';
@@ -26,6 +25,7 @@ import ClientsSlider from './clients-slider.vue';
 import Testimonials from './testimonials.vue';
 import UsageStats from './usage-stats.vue';
 import LatestNews from './latest-news.vue';
+import ContactSeperator from '../shared/contact-seperator.vue';
 
 export default {
 	name: 'WebsiteHomeView',
