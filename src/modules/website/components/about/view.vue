@@ -3,6 +3,7 @@
     <hero></hero>
     <who-we-are></who-we-are>
     <meet-the-team></meet-the-team>
+    <services-grid></services-grid>
   </div>
 </template>
 
@@ -11,13 +12,15 @@
 import Hero from './hero.vue'
 import WhoWeAre from './who-we-are.vue';
 import MeetTheTeam from './meet-the-team.vue';
+import ServicesGrid from './services-grid.vue';
 
 export default {
   name: 'WebsiteAboutView',
   components: {
     Hero,
     WhoWeAre,
-    MeetTheTeam
+    MeetTheTeam,
+    ServicesGrid
   },
   mounted() {
     document.getElementById('website-menu').classList.add('menu-dark');
