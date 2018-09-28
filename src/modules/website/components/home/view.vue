@@ -41,6 +41,9 @@ export default {
     Testimonials,
     UsageStats,
     LatestNews
+  },
+  mounted() {
+    document.getElementById('website-menu').classList.remove('menu-dark');
   }
 };
 </script>
