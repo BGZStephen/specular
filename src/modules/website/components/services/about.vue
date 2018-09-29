@@ -16,16 +16,16 @@
         </div>
         <div class="col col-md-4 feature">
           <div class="icon-container">
-            <i class="fa fa-pencil-alt"></i>
+            <i class="fa fa-desktop"></i>
           </div>
-          <h5>CUSTOM TYPOGRAPHY</h5>
+          <h5>RETINA DISPLAY</h5>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</p>
         </div>
         <div class="col col-md-4 feature">
           <div class="icon-container">
-            <i class="fa fa-pencil-alt"></i>
+            <i class="fa fa-paper-plane"></i>
           </div>
-          <h5>CUSTOM TYPOGRAPHY</h5>
+          <h5>ILLUSTRATION</h5>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</p>
         </div>
       </div>
@@ -99,11 +99,13 @@ export default {
           font-weight: 600;
           font-size: 16px;
           margin-bottom: 5px;
+          letter-spacing: .15em;
         }
 
         p {
           font-weight: 300;
           font-size: 12px;
+          letter-spacing: .1em;
         }
 
         &:hover {
