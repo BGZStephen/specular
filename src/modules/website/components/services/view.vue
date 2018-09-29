@@ -1,19 +1,22 @@
 <template lang="html">
   <div id="services-view">
     <hero></hero>
-    <contact-seperator></contact-seperator>
+    <services-grid></services-grid>    
+    <testimonials></testimonials>
   </div>
 </template>
 
 <script>
-import ContactSeperator from '../shared/contact-seperator.vue';
 import Hero from './hero.vue';
+import ServicesGrid from './services-grid.vue';
+import Testimonials from '../shared/testimonials.vue';
 
 export default {
 	name: 'ServicesView',
   components: {
     Hero,
-    ContactSeperator,
+    Testimonials,
+    ServicesGrid
   },
   mounted() {
     document.getElementById('website-menu').classList.remove('menu-dark');

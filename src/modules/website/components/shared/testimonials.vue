@@ -154,9 +154,7 @@ export default {
           margin-bottom: 20px;
 
           &:last-of-type {
-            @media(min-width: $screen-md) {
-              margin-bottom: 45px;
-            }
+            margin-bottom: 0px;
           }
         }
 

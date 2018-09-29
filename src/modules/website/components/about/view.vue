@@ -14,8 +14,8 @@
 import Hero from './hero.vue'
 import WhoWeAre from './who-we-are.vue';
 import MeetTheTeam from './meet-the-team.vue';
-import ServicesGrid from './services-grid.vue';
 import OurClients from './our-clients.vue';
+import ServicesGrid from './services-grid.vue';
 import ContactSeperator from '../shared/contact-seperator.vue';
 
 export default {
