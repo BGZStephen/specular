@@ -1,6 +1,6 @@
 <template>
   <div id="filter-selector">
-    <button v-for="(filter, index) in filters" :key="filter.id" v-on:click="selectFilter(index)">{{filter.label}}</button>
+    <a class="filter" v-for="(filter, index) in filters" :key="filter.id" v-on:click="selectFilter(index)">{{filter.label}}</a>
   </div>  
 </template>
 
@@ -37,12 +37,12 @@ export default {
   methods: {
     selectFilter(index) {
       this.removeActiveFilter();
-      this.$el.querySelectorAll('button')[index].classList.add('active');
+      this.$el.querySelectorAll('.filter')[index].classList.add('active');
       this.$emit('filter-change', this.filters[index].id)
     },
 
     removeActiveFilter() {
-      const buttons = this.$el.querySelectorAll('button')
+      const buttons = this.$el.querySelectorAll('.filter')
       for (const button of buttons) {
         button.classList.remove('active');
       }
@@ -54,11 +54,11 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   @import '~app-root/styles/variables/index';
 
   #filter-selector {
-    button {
+    .filter {
       background: none;
       border: none;
       color: $font-light-grey;
