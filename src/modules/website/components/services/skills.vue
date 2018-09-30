@@ -11,21 +11,31 @@
           <p>Codeless has been quietly but consistently building a powerhouse portfolio of web site design and marketing success. We have cheerfully and expertly designed, developed, strategized and implemented web marketing programs and wordpress sites for small and large medical clients, non-profit foundations, design agencies, real estate groups and small service clients.Codeless has been quietly but consistently building a powerhouse portfolio of web site design and marketing success. We have cheerfully and expertly designed, developed, strategized.</p>
         </div>
         <div class="col col-sm-8">
-          <skills-progress-bar></skills-progress-bar>
+          <skill-progress-bar title="Web development" progress="85"></skill-progress-bar>
+          <skill-progress-bar title="Web design" progress="90"></skill-progress-bar>
+          <skill-progress-bar title="Brand & marketing" progress="75"></skill-progress-bar>
+          <skill-progress-bar title="Support & updates" progress="95"></skill-progress-bar>
         </div>
       </div>
     </div>
   </div>  
 </template>
 <script>
+
+import SkillProgressBar from './skill-progress-bar.vue';
+
 export default {
-  name: 'Skills'
+  name: 'Skills',
+  components: {
+    SkillProgressBar
+  }
 }
 </script>
 <style lang="scss" scoped>
   @import '~app-root/styles/variables/index';
 
   #skills {
+    background: #f5f5f5;
     padding: 60px 25px;
 
     .container-1100 {
