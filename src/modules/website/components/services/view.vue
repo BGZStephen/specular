@@ -2,6 +2,7 @@
   <div id="services-view">
     <hero></hero>
     <about></about>
+    <skills></skills>
     <services-grid></services-grid>    
     <testimonials></testimonials>
   </div>
@@ -10,6 +11,7 @@
 <script>
 import Hero from './hero.vue';
 import About from './about.vue';
+import Skills from './skills.vue';
 import ServicesGrid from './services-grid.vue';
 import Testimonials from '../shared/testimonials.vue';
 
@@ -19,7 +21,8 @@ export default {
     Hero,
     Testimonials,
     ServicesGrid,
-    About
+    About,
+    Skills,
   },
   mounted() {
     document.getElementById('website-menu').classList.remove('menu-dark');
