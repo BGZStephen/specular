@@ -1,6 +1,6 @@
 <template>
   <div id="contact-form">
-    <h5>Get connected</h5>
+    <h4>Get connected</h4>
     <div class="input-group">
       <label for="name">Your Name (required)</label>
       <input id="name" name="name" type="text" class="form-input" required>
@@ -31,7 +31,7 @@ export default {
   @import '~app-root/styles/variables/index';
 
   #contact-form {
-    h5 {
+    h4 {
       font-size: 22px;
       font-weight: 600;
       margin-bottom: 25px;
