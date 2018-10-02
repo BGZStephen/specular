@@ -19,6 +19,7 @@ export default {
   mounted: function () {
     this.onWindowResize()
     window.addEventListener('resize', this.onWindowResize);
+    window.addEventListener('scroll', this.onWindowScroll);
   },
   data() {
     return {
@@ -78,6 +79,13 @@ export default {
     },
     clearCustomMenuStyles() {
       document.getElementById('website-menu-items-list').style.cssText = "";
+    },
+    onWindowScroll() {
+      if (window.pageYOffset > 500) {
+        document.querySelector('#website-menu').classList.add('menu-fixed');
+      } else {
+        document.querySelector('#website-menu').classList.remove('menu-fixed');
+      }
     }
   }
 };
@@ -93,6 +101,7 @@ export default {
     left: 0;
     right: 0;
     z-index: $website-menu-z-index;
+    transition: 0.3s ease all;
 
     .container-1100 {
       .logo-container {
@@ -203,7 +212,8 @@ export default {
       }
     }
 
-    &.menu-dark {
+    &.menu-dark,
+    &.menu-fixed {
       .container-1100 {
         .logo {
           display: block;
@@ -226,6 +236,18 @@ export default {
           @media(min-width: $screen-md) {
             color: black;
           }
+        }
+      }
+    }
+
+    &.menu-fixed {
+      @media(min-width: $screen-md) {
+        position: fixed;
+        background: rgba(white, .9);
+        color: black;
+
+        .logo-container {
+          height: 60px;
         }
       }
     }
