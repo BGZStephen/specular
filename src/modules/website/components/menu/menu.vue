@@ -179,16 +179,14 @@ export default {
           padding: 10px 40px;
 
           &.router-link-active,
-          &:hover {
-            color: #ffffff;
+          &:hover,
+          &:focus {
+            color: $brand-blue;
           }
 
           @media(min-width: $screen-lg) {
             color: #ffffff;
             padding: 10px 20px;
-            &:hover {
-              color: $font-light-grey;
-            }
           }
         }
 
