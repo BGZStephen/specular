@@ -1,7 +1,7 @@
 <template>
   <div id="address">
-    <h4>More information</h4>
-    <h5>Our addresses, phones etc...</h5>
+    <h4 class="section-heading">More information</h4>
+    <h5 class="section-subheading">Our addresses, phones etc...</h5>
     <p>Codeless has been quietly but consistently building a powerhouse portfolio of web site design and marketing.</p>
     <div class="contact-item">
       <div class="icon-container">
@@ -50,17 +50,13 @@ export default {
 
   #address {
     h4 {
-      font-size: 22px;
-      font-weight: 600;
       text-transform: uppercase;
     }
 
     h5 {
       position: relative;
       top: -5px;
-      color: $font-grey;
       font-weight: 300;
-      font-size: 22px;
       margin-bottom: 20px;
 
       @media(min-width: $screen-md) {
@@ -69,7 +65,6 @@ export default {
     }
 
     > p {
-      color: $font-grey;
       font-size: 13px;
       margin-bottom: 25px;
     }

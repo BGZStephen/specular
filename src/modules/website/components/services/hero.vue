@@ -46,6 +46,7 @@ export default {
     }
 
     p {
+      color: white;
       font-size: 26px;
       @media(min-width: $screen-md) {
         font-weight: 300;

@@ -7,7 +7,7 @@
           <p class="slide-body">{{slide.body}}</p>
           <div class="slide-buttons-container">
             <a class="button" :class="button.class" v-for="button in slide.buttons">
-              <p>{{button.label}}</p>
+              {{button.label}}
               <i class="fa fa-arrow-right"></i>
             </a>
           </div>

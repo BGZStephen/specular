@@ -72,8 +72,6 @@ export default {
     }
 
     p {
-      color: $font-grey;
-      font-size: 14px;
       width: 480px;
       max-widtH: 80%;
       margin: 0 auto;

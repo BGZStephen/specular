@@ -4,8 +4,8 @@
       <div class="row">
         <div class="col col-md-7">
           <div class="text-container">
-            <h4>SPECULAR ON EVERY DEVICE</h4>
-            <h5>Responsive, unique, multipurpose</h5>
+            <h4 class="section-heading">SPECULAR ON EVERY DEVICE</h4>
+            <h5 class="section-subheading">Responsive, unique, multipurpose</h5>
             <p>Codeless has been quietly but consistently building a powerhouse portfolio of web site design and marketing success.</p>
             <p>We have cheerfully and expertly designed, developed, strategized and implemented web marketing programs and wordpress sites for small and large medical clients, non-profit foundations, design agencies, real estate groups and small service clients. Praesent tincidunt molestie libero mollis porta. Praesent sit amet faucibus leo.</p>
             <a class="button">
@@ -40,16 +40,10 @@ export default {
       text-align: center;
 
       h4 {
-        font-size: 22px;
-        font-weight: 600;
         margin-bottom: 5px;
       }
 
-
       h5 {
-        color: $font-grey;
-        font-weight: 500;
-        font-size: 20px;
         margin-bottom: 20px;
 
         @media(min-width: $screen-md) {
@@ -92,6 +86,7 @@ export default {
         position: relative;
         transition: 0.3s ease all;
         right: 0;
+        margin-bottom: 0;
       }
 
       i {
@@ -100,7 +95,6 @@ export default {
         position: absolute;
         transition: 0.3s ease all;
         right: 0;
-        top: 14px;
       }
 
       &:hover {

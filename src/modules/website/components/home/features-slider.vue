@@ -60,7 +60,6 @@ export default {
       }
 
       p {
-        color: $font-grey;
         line-height: 1.6;
         font-size: 13px;
       }

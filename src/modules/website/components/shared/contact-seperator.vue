@@ -3,7 +3,7 @@
     <div class="container-1100">
       <p>Are you ready to be part of our 2,000+ satisfied clients?</p>
       <a class="button">
-        <p>Contact us</p>
+        Contact us
         <i class="fa fa-arrow-right"></i>
       </a>
     </div>
@@ -30,6 +30,7 @@ export default {
       text-align: center;
 
       > p {
+        color: white;
         font-size: 20px;
         font-weight: 600;
         margin-bottom: 25px;

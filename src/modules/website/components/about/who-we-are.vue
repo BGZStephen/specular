@@ -3,13 +3,13 @@
     <div class="container-1100">
       <div class="row">
         <div class="col col-sm-4 text-container">
-          <h4>Who we are</h4>
-          <h5>Learn more about us</h5>
+          <h4 class="section-heading">Who we are</h4>
+          <h5 class="section-subheading">Learn more about us</h5>
           <p>Codeless has been quietly but consistently building a powerhouse portfolio of web site design and marketing success. We have cheerfully and expertly designed, developed, strategized and implemented web marketing programs and wordpress sites for small and large medical clients, non-profit foundations, design agencies, real estate groups and small service clients. Specular includes all our years of experience on doing web.</p>
         </div>
         <div class="col col-sm-8 text-container">
-          <h4>Why choose us</h4>
-          <h5>Take a look to our business fundamentals</h5>
+          <h4 class="section-heading">Why choose us</h4>
+          <h5 class="section-subheading">Take a look to our business fundamentals</h5>
           <div class="row">
             <div class="col col-md-6">
               <div class="list-item">
@@ -67,16 +67,7 @@ export default {
       padding: 0 20px;
     }
 
-    h4 {
-      font-size: 22px;
-      font-weight: 600;
-    }
-
-
     h5 {
-      color: $font-grey;
-      font-weight: 500;
-      font-size: 20px;
       margin-bottom: 20px;
 
       @media(min-width: $screen-md) {
@@ -85,8 +76,6 @@ export default {
     }
 
     p {
-      color: $font-grey;
-      font-size: 14px;
       line-height: 1.45;
       margin-bottom: 20px;
 
